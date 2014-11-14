@@ -61,8 +61,16 @@ table input[type="reset"] {
 			</tr>
 			<tr>
 				<td>性别</td>
-				<td><input type="radio" value="男" name="mgender"
-					checked="checked" />男<input type="radio" value="女" name="mgender" />女</td>
+				<td>
+					<c:if test="${membersInfo.mgender eq '男' }">
+					<input type="radio" value="男" name="mgender" checked="checked" />男
+					<input type="radio" value="女" name="mgender" />女
+					</c:if>
+					<c:if test="${membersInfo.mgender ne '男' }">
+					<input type="radio" value="男" name="mgender" />男
+					<input type="radio" value="女" name="mgender" checked="checked"  />女
+					</c:if>
+				</td>
 			</tr>
 			<tr>
 				<td>年龄</td>
