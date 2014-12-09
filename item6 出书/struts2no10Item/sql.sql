@@ -1,32 +1,32 @@
-create table BOOK
+ï»¿create table BOOK
 (
-  id      VARCHAR2(100 CHAR) not null,  --±àºÅ
-  isbn    VARCHAR2(50 CHAR),    --ÊéºÅ
-  title   VARCHAR2(1024 CHAR),    -- ±êÌâ
-  price   FLOAT not null,    -- ¼Û¸ñ  
-  pubdate TIMESTAMP(6) not null,  -- ³ö°æÈÕÆÚ
-  intro   VARCHAR2(2000 CHAR)    -- ¼ò½é
+  id      VARCHAR2(100 CHAR) not null,  --ç¼–å·
+  isbn    VARCHAR2(50 CHAR),    --ä¹¦å·
+  title   VARCHAR2(1024 CHAR),    -- æ ‡é¢˜
+  price   FLOAT not null,    -- ä»·æ ¼  
+  pubdate TIMESTAMP(6) not null,  -- å‡ºç‰ˆæ—¥æœŸ
+  intro   VARCHAR2(2000 CHAR)    -- ç®€ä»‹
 );
 
 alter table BOOK add primary key (ID);
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '9-787302-274469', 'JavaServer Faces 2.0ÍêÈ«²Î¿¼ÊÖ²á', 98.00, to_date('2012-1-5','yyyy-mm-dd'), 'È«Ãæ½éÉÜJSF2.0£¬ÏêÏ¸ÈçºÎÊ¹ÓÃAjax£¬ÒÔ¼°°´ÕÕJSF2.0µÄ·½Ê½¹¹½¨×é¼ş');
+(book_seq.nextval, '9-787302-274469', 'JavaServer Faces 2.0å®Œå…¨å‚è€ƒæ‰‹å†Œ', 98.00, to_date('2012-1-5','yyyy-mm-dd'), 'å…¨é¢ä»‹ç»JSF2.0ï¼Œè¯¦ç»†å¦‚ä½•ä½¿ç”¨Ajaxï¼Œä»¥åŠæŒ‰ç…§JSF2.0çš„æ–¹å¼æ„å»ºç»„ä»¶');
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '978-7-115-21542-0', 'jQuery»ù´¡½Ì³Ì£¨µÚ2°æ£©', 49.00, to_date('2009-11-2','yyyy-mm-dd'), 'º­¸ÇÁËjQuery1.3µÄÈ«²¿ĞÂÌØĞÔ');
+(book_seq.nextval, '978-7-115-21542-0', 'jQueryåŸºç¡€æ•™ç¨‹ï¼ˆç¬¬2ç‰ˆï¼‰', 49.00, to_date('2009-11-2','yyyy-mm-dd'), 'æ¶µç›–äº†jQuery1.3çš„å…¨éƒ¨æ–°ç‰¹æ€§');
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '9-787111-251767', 'ExtJS WebÓ¦ÓÃ³ÌĞò¿ª·¢Ö¸ÄÏ', 59.00, to_date('2010-08-5','yyyy-mm-dd'), 'Í¨¹ı´óÁ¿µÄÊµÀı½²½â¼¼Êõ');
+(book_seq.nextval, '9-787111-251767', 'ExtJS Webåº”ç”¨ç¨‹åºå¼€å‘æŒ‡å—', 59.00, to_date('2010-08-5','yyyy-mm-dd'), 'é€šè¿‡å¤§é‡çš„å®ä¾‹è®²è§£æŠ€æœ¯');
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '9787111291954', 'AndroidÓ¦ÓÃ¿ª·¢½ÒÃØ', 69.00, to_date('2011-05-25','yyyy-mm-dd'), 'Èç¹ûÄãÒ²ÔÚË¼¿¼ÏÂÃæÕâĞ©ÎÊÌâ£¬Ò²Ğí±¾Êé¾ÍÊÇÄãÏëÒªµÄ');
+(book_seq.nextval, '9787111291954', 'Androidåº”ç”¨å¼€å‘æ­ç§˜', 69.00, to_date('2011-05-25','yyyy-mm-dd'), 'å¦‚æœä½ ä¹Ÿåœ¨æ€è€ƒä¸‹é¢è¿™äº›é—®é¢˜ï¼Œä¹Ÿè®¸æœ¬ä¹¦å°±æ˜¯ä½ æƒ³è¦çš„');
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '5674302-274459', 'Java Swing³ÌĞòÉè¼Æ', 55.34, to_date('2009-12-15','yyyy-mm-dd'), '´ÓÇ³ÈëÉîµÄ½éÉÜÁËJavaµÄSwing¿ª·¢£¬³ÉÎªÒ»¸öJava×ÀÃæÓ¦ÓÃ³ÌĞòµÄĞĞ¼Ò');
+(book_seq.nextval, '5674302-274459', 'Java Swingç¨‹åºè®¾è®¡', 55.34, to_date('2009-12-15','yyyy-mm-dd'), 'ä»æµ…å…¥æ·±çš„ä»‹ç»äº†Javaçš„Swingå¼€å‘ï¼Œæˆä¸ºä¸€ä¸ªJavaæ¡Œé¢åº”ç”¨ç¨‹åºçš„è¡Œå®¶');
 
 insert into book (id, isbn, title, price, pubdate, intro) values
-(book_seq.nextval, '345345-232-131', 'Java±à³ÌË¼Ïë', 99.80, to_date('2009-5-4','yyyy-mm-dd'), 'Ò»±¾È«Ãæ½éÉÜJavaµÄÊé¼®£¬ÊÊºÏÈÎºÎ²ã´ÎµÄ¶ÁÕß');
+(book_seq.nextval, '345345-232-131', 'Javaç¼–ç¨‹æ€æƒ³', 99.80, to_date('2009-5-4','yyyy-mm-dd'), 'ä¸€æœ¬å…¨é¢ä»‹ç»Javaçš„ä¹¦ç±ï¼Œé€‚åˆä»»ä½•å±‚æ¬¡çš„è¯»è€…');
 
 -- Create sequence 
 create sequence BOOK_SEQ
